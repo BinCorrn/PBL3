@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ESP32 Web Server</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+    <h1>Smart Home</h1>
+
+    <div class="image1">
+        <img style="max-width: 100%;" alt src = "https://cdn.mos.cms.futurecdn.net/wGoLnHfGZkARttTsVYfiW.jpg">
+    </div>
+    <div class="product-grid">
+        
+        <div class="product">
+            <img style="max-width: 100%;" src="https://sundecor.vn/img/image/tin/858/6-mau-den-cho-bep-1.png" alt="Product 1">
+            <h3>LAMP</h3>
+            <p>GPIO state: <strong> %STATE%</strong></p>
+            <p><a href="/on"><button class="button">ON</button></a></p>
+            <p><a href="/off"><button class="button button2">OFF</button></a></p>
+        </div>
+
+        <div class="card">
+            <img style="max-width: 100%;" src="https://quattranmy.com/wp-content/uploads/2022/10/quat-tran-phong-bep-12.jpg" alt="Product 2">
+            <p class="card-title"> <strong>FAN </p>
+            <p class="switch">
+                <input type="range" onchange="updateSliderPWM(this)" id="slider2" min="0" max="100" step="1"
+                    value="0" class="slider">
+            </p>
+            <p class="state"><strong>SPEED: <span id="sliderValue2"></span> &percnt;</p>
+        </div>
+
+        <div class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Nhiet do va do am</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
